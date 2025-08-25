@@ -1,7 +1,9 @@
 import pandas as pd
 import numpy as np
 from scipy.optimize import minimize
+import yfinance as yf
 
+data1 = yf.download("AAPL", start= '2025-08-18', end= '2025-08-21',interval="1m")['Close']
 
 # Fetch data with error handling
 tickers = ["AAPL", "MSFT", "GOOGL", "AMZN"]
