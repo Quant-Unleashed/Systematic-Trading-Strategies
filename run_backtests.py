@@ -36,7 +36,7 @@ for k, v in summary.items():
     print(f"{k}: {v:.2%}")
 
 print("Generating plots...")
-plot_equity_curve(equity_curve)
+plot_equity_curve(equity_curve, OOS_DATE)
 plot_drawdown(drawdown)
 
 print("Done! Check reports/figures/")
