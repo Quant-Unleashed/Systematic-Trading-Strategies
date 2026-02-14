@@ -8,7 +8,7 @@ This repository demonstrates an end-to-end quantitative research workflow:
 
 ---
 
-## 📊 Strategy Performance Overview (2005–2024)
+## 📊 Strategy Performance Overview (Jan 2005 – Dec 2025)
 
 Backtests use daily data from Yahoo Finance with transaction cost assumptions.
 
@@ -22,9 +22,15 @@ Backtests use daily data from Yahoo Finance with transaction cost assumptions.
 
 *All results are research backtests and do not represent live trading performance.*
 
-### Example Equity Curve (generated automatically after running backtests)
+### Example Equity Curve (dashed line marks start of out-of-sample period in 2020: generated automatically after running backtests)
 
 ![Equity Curve](reports/figures/equity_curve.png)
+
+Backtests use daily data from Yahoo Finance (Jan 2005 – Dec 2025).
+
+In-sample period: Jan 2005 – Dec 2019  
+Out-of-sample period: Jan 2020 – Dec 2025  
+A vertical dashed line in the equity curve marks the start of the out-of-sample period.
 
 ---
 
