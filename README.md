@@ -20,7 +20,10 @@ Backtests use daily data from Yahoo Finance with transaction cost assumptions.
 | Risk Parity Portfolio | 8.7% | 1.21 | -12% | 7% |
 | 60/40 Benchmark | 6.1% | 0.62 | -22% | 10% |
 
-### Example Equity Curve
+*All results are research backtests and do not represent live trading performance.*
+
+### Example Equity Curve (generated automatically after running backtests)
+
 ![Equity Curve](reports/figures/equity_curve.png)
 
 ---
@@ -65,18 +68,83 @@ quantitative trading and research roles.
 
 ## 🏗️ Research Pipeline
 
+```
 Data → Signal Generation → Portfolio Construction → Backtesting → Evaluation → Reporting
+```
 
 ---
 
 ## ⚙️ Project Structure
 
-- data/ # raw & processed market data
-- research/ # notebooks used for strategy research
-- src/ # reusable backtesting framework
-- strategies/ # individual trading strategies
-- reports/ # auto-generated figures & performance tables
+```
+systematic-trading-lab/
+│
+├── README.md                 # Landing page & project overview
+├── requirements.txt          # Python dependencies
+├── run_backtests.py          # Main script to run all strategies
+│
+├── data/                     # Market data
+│   ├── raw/                  # Downloaded data
+│   └── processed/            # Cleaned & aligned data
+│
+├── research/                 # Research notebooks (idea exploration)
+│   ├── 01_factor_research.ipynb
+│   └── 02_momentum_research.ipynb
+│
+├── src/                      # Reusable backtesting framework
+│   ├── data/                 # Data loaders
+│   ├── signals/              # Signal generation
+│   ├── portfolio/            # Portfolio construction
+│   ├── backtest/             # Backtesting engine
+│   ├── risk/                 # Risk metrics
+│   └── utils/                # Helper functions
+│
+├── strategies/               # Individual strategies
+│   ├── cross_sectional_momentum.py
+│   ├── time_series_momentum.py
+│   ├── mean_reversion.py
+│   └── risk_parity.py
+│
+├── reports/                  # Auto-generated outputs
+│   ├── figures/              # Plots (equity curve, drawdown, etc.)
+│   └── performance_summary.csv
+│
+└── tests/                    # Unit tests
+```
 
+---
 
-## Author
-Aman Kedia, CQF, FRM – Quantitative Finance Professional. Follow me on [Linkedin](https://linkedin.com/in/aman-kedia-728059132).
+## 🚀 Getting Started
+
+Install dependencies:
+```
+pip install -r requirements.txt
+```
+
+Run all backtests:
+
+```
+python run_backtests.py
+```
+
+This will generate performance metrics and plots inside the `reports/` folder.
+
+---
+
+## 🗺️ Roadmap
+
+✔ Portfolio construction models implemented  
+🔄 Full backtesting engine integration  
+🔄 Automated performance reporting  
+🔜 Walk-forward and out-of-sample testing  
+🔜 Multi-asset futures strategies  
+🔜 Transaction cost and slippage modelling  
+
+---
+
+## 👤 Author
+
+**Aman Kedia, CQF, FRM**  
+Quantitative Finance Professional  
+
+Connect on [Linkedin](https://linkedin.com/in/aman-kedia-728059132)
