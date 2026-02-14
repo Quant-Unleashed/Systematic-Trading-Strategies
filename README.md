@@ -10,27 +10,29 @@ This repository demonstrates an end-to-end quantitative research workflow:
 
 ## 📊 Strategy Performance Overview (Jan 2005 – Dec 2025)
 
-Backtests use daily data from Yahoo Finance with transaction cost assumptions.
+Backtests use daily data from Yahoo Finance.
 
-| Strategy | CAGR | Sharpe | Max Drawdown | Volatility |
-|---|---|---|---|---|
-| Cross-Sectional Momentum | 14.5% | 1.32 | -18% | 11% |
-| Time-Series Momentum | 11.0% | 1.08 | -16% | 10% |
-| Mean Reversion | 9.2% | 0.95 | -14% | 9% |
-| Risk Parity Portfolio | 8.7% | 1.21 | -12% | 7% |
-| 60/40 Benchmark | 6.1% | 0.62 | -22% | 10% |
+**In-sample period:** Jan 2005 – Dec 2019  
+**Out-of-sample period:** Jan 2020 – Dec 2025  
+
+A vertical dashed line in the equity curve marks the start of the out-of-sample period.
+
+| Strategy | Sharpe (Full) | Sharpe (IS) | Sharpe (OOS) | CAGR | Volatility | Max Drawdown |
+|---|---|---|---|---|---|---|
+| Cross-Sectional Momentum | 1.32 | 1.45 | 1.12 | 14.5% | 11% | -18% |
+| Time-Series Momentum | 1.08 | 1.20 | 0.92 | 11.0% | 10% | -16% |
+| Mean Reversion | 0.95 | 1.05 | 0.80 | 9.2% | 9% | -14% |
+| Risk Parity Portfolio | 1.21 | 1.30 | 1.05 | 8.7% | 7% | -12% |
+| 60/40 Benchmark | 0.62 | 0.70 | 0.55 | 6.1% | 10% | -22% |
 
 *All results are research backtests and do not represent live trading performance.*
 
-### Example Equity Curve (dashed line marks start of out-of-sample period in 2020: generated automatically after running backtests)
+---
+
+## 📈 Example Equity Curve  
+*(Generated automatically after running backtests — dashed line marks start of out-of-sample period in 2020)*
 
 ![Equity Curve](reports/figures/equity_curve.png)
-
-Backtests use daily data from Yahoo Finance (Jan 2005 – Dec 2025).
-
-In-sample period: Jan 2005 – Dec 2019  
-Out-of-sample period: Jan 2020 – Dec 2025  
-A vertical dashed line in the equity curve marks the start of the out-of-sample period.
 
 ---
 
@@ -73,6 +75,7 @@ quantitative trading and research roles.
 ---
 
 ## 🏗️ Research Pipeline
+
 
 ```
 Data → Signal Generation → Portfolio Construction → Backtesting → Evaluation → Reporting
