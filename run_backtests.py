@@ -10,7 +10,11 @@ print("Downloading data...")
 # ETF universe (multi-asset)
 tickers = ["SPY", "TLT", "GLD", "DBC"]
 
-data = yf.download(tickers, start="2005-01-01")
+START_DATE = "2005-01-01"
+END_DATE = "2025-12-31"
+OOS_DATE = "2020-01-01"
+
+data = yf.download(tickers, start=START_DATE, end=END_DATE)
 
 # Use Adjusted Close if available, otherwise Close
 if "Adj Close" in data.columns:

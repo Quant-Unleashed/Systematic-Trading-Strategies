@@ -9,7 +9,7 @@ FIGURES_PATH.mkdir(parents=True, exist_ok=True)
 def plot_equity_curve(equity_curve):
     plt.figure(figsize=(10,5))
     equity_curve.plot()
-    plt.title("Portfolio Equity Curve")
+    plt.title("Portfolio Equity Curve (Out-of-Sample begins 2020)")
     plt.ylabel("Growth of $1")
     plt.grid(True)
     plt.savefig(FIGURES_PATH / "equity_curve.png")
