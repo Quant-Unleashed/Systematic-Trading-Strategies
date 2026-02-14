@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # pandas is used for data manipulation, numpy for numerical operations, and matplotlib for plotting.
 
 # Define the tickers for the All Weather Portfolio assets
-tickers = ['VTI', 'TLT', 'IEI', 'GLD', 'DBC']  # VTI: Total Stock Market, TLT: Long-term Treasuries, IEI: Intermediate Treasuries, GLD: Gold, DBC: Commodities
+tickers = ['HFUSAS.SW', 'VTI', 'TLT', 'IEI', 'GLD', 'DBC']  # VTI: Total Stock Market, TLT: Long-term Treasuries, IEI: Intermediate Treasuries, GLD: Gold, DBC: Commodities
 
 # Explanation: These tickers represent the components of the All Weather Portfolio:
 # - VTI: Vanguard Total Stock Market ETF (represents equities/stocks)
