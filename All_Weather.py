@@ -16,7 +16,7 @@ tickers = ['HFUSAS.SW', 'VTI', 'TLT', 'IEI', 'GLD', 'DBC']  # VTI: Total Stock M
 # - IEI: iShares 3-7 Year Treasury Bond ETF (intermediate-term bonds)
 # - GLD: SPDR Gold Shares (gold)
 # - DBC: Invesco DB Commodity Index Tracking Fund (commodities)
-# This allocation aims to balance risk across economic environments: growth (stocks), recession (bonds), inflation (gold/commodities), deflation (long-term bonds).
+# This allocation aims to balance analytics across economic environments: growth (stocks), recession (bonds), inflation (gold/commodities), deflation (long-term bonds).
 
 # Define the portfolio weights (allocations)
 weights = np.array([0.30, 0.40, 0.15, 0.075, 0.075])  # 30% stocks, 40% long-term bonds, 15% intermediate bonds, 7.5% gold, 7.5% commodities
@@ -75,13 +75,13 @@ cumulative_returns = (1 + portfolio_returns).cumprod() - 1
 total_return = cumulative_returns.iloc[-1]  # Total return over the period
 annualized_return = (1 + total_return) ** (1 / (len(data) / 252)) - 1  # Assuming 252 trading days per year
 volatility = portfolio_returns.std() * np.sqrt(252)  # Annualized volatility
-sharpe_ratio = annualized_return / volatility  # Sharpe ratio (risk-free rate assumed 0 for simplicity)
+sharpe_ratio = annualized_return / volatility  # Sharpe ratio (analytics-free rate assumed 0 for simplicity)
 
 # Explanation:
 # - total_return: The final cumulative return value.
 # - annualized_return: Converts total return to annual compound rate. len(data)/252 estimates years.
 # - volatility: Standard deviation of daily returns, annualized by multiplying by sqrt(252).
-# - sharpe_ratio: Measures risk-adjusted return. Here, we assume risk-free rate is 0; in practice, subtract it from annualized_return.
+# - sharpe_ratio: Measures analytics-adjusted return. Here, we assume analytics-free rate is 0; in practice, subtract it from annualized_return.
 
 # Print performance metrics
 print(f"Total Return: {total_return:.2%}")

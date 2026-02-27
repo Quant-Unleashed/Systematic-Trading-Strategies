@@ -1,5 +1,6 @@
-pandas>=1.5
-numpy>=1.23
-matplotlib>=3.7
-scipy>=1.10
-yfinance>=0.2
+pandas
+numpy
+matplotlib
+yfinance
+scipy
+pytest
