@@ -8,24 +8,19 @@ This repository demonstrates an end-to-end quantitative research workflow:
 
 ---
 
-## 📊 Strategy Performance Overview (Jan 2005 – Dec 2025)
+## 📊 Strategy Leaderboard
+(Automatically generated from backtest experiments)
+<!-- LEADERBOARD_START -->
+Leaderboard will appear here after experiments run.
+<!-- LEADERBOARD_END -->
 
-Backtests use daily data from Yahoo Finance.
+Metrics reported include:
 
-**In-sample period:** Jan 2005 – Dec 2019  
-**Out-of-sample period:** Jan 2020 – Dec 2025  
-
-A vertical dashed line in the equity curve marks the start of the out-of-sample period.
-
-| Strategy | Sharpe (Full) | Sharpe (IS) | Sharpe (OOS) | CAGR | Volatility | Max Drawdown |
-|---|---|---|---|---|---|---|
-| Cross-Sectional Momentum | 1.32 | 1.45 | 1.12 | 14.5% | 11% | -18% |
-| Time-Series Momentum | 1.08 | 1.20 | 0.92 | 11.0% | 10% | -16% |
-| Mean Reversion | 0.95 | 1.05 | 0.80 | 9.2% | 9% | -14% |
-| Risk Parity Portfolio | 1.21 | 1.30 | 1.05 | 8.7% | 7% | -12% |
-| 60/40 Benchmark | 0.62 | 0.70 | 0.55 | 6.1% | 10% | -22% |
-
-*All results are research backtests and do not represent live trading performance.*
+• Annual Return  
+• Sharpe Ratio  
+• Sortino Ratio  
+• Maximum Drawdown  
+• Out-of-Sample Sharpe  
 
 ---
 
