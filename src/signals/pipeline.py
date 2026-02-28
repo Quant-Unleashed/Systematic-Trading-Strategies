@@ -10,6 +10,7 @@ class SignalPipeline:
         weights = self.signal.generate(prices)
 
         for t in self.transforms:
-            weights = t.apply(weights)
+
+            weights = t.apply(prices, weights)
 
         return weights

@@ -1,15 +1,16 @@
-from config.base_config import CONFIG as BASE
+from config.base_config import BASE_CONFIG
 
-CONFIG = BASE.copy()
 
-CONFIG.update({
+CONFIG = {
 
-    "strategy": "momentum",
+    **BASE_CONFIG,
 
-    "momentum_lookback": 252,
+    "strategy": "momentum_vol_regime",
+
+    "momentum_lookback": [21,63,252],
 
     "vol_target": 0.10,
 
     "regime_filter": True
 
-})
+}

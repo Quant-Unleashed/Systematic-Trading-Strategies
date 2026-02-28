@@ -4,10 +4,7 @@ from pathlib import Path
 from config.momentum_vol_regime_config import CONFIG
 
 from src.data.data_loader import DataLoader
-from src.signals.momentum_signal import MomentumSignal
-from src.signals.pipeline import SignalPipeline
-from src.portfolio.equal_weight import EqualWeightPortfolio
-from src.strategies.momentum_strategy import Strategy
+from src.strategies.strategy_factory import StrategyFactory
 from src.backtest.backtester import Backtester
 from src.analytics.performance import Performance
 from src.analytics.oos_analysis import OOSAnalyzer
@@ -32,17 +29,7 @@ def run_strategy(CONFIG):
 
     prices = loader.load()
 
-    # Build signal
-    signal = MomentumSignal(
-        lookbacks=CONFIG["momentum_lookback"]
-    )
-
-    pipeline = SignalPipeline(signal)
-
-    # Portfolio construction
-    portfolio = EqualWeightPortfolio()
-
-    strategy = Strategy(pipeline, portfolio)
+    strategy = StrategyFactory.build(CONFIG)
 
     # Run backtest
     bt = Backtester(
@@ -105,8 +92,10 @@ def run_strategy(CONFIG):
     results = CONFIG.copy()
 
     results.update({
-        "total_return": total_return,
-        "annual return": annual_return,
+        "returns": returns,
+        "equity": equity,
+
+        "annual_return": annual_return,
         "volatility": vol,
         "sharpe": sharpe,
         "sortino": sortino,

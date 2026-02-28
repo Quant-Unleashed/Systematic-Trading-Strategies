@@ -4,30 +4,49 @@ A research-driven platform for developing, backtesting and evaluating
 systematic trading strategies and portfolio allocation models using Python.
 
 This repository demonstrates an end-to-end quantitative research workflow:
-**data → signals → portfolio construction → backtesting → performance evaluation**
+
+**Data → Signals → Portfolio Construction → Backtesting → Evaluation → Research**
+
+The goal of this project is to demonstrate the type of systematic research
+infrastructure used in quantitative trading and portfolio management.
 
 ---
 
 ## 📊 Strategy Leaderboard
-(Automatically generated from backtest experiments)
+
 <!-- LEADERBOARD_START -->
-Leaderboard will appear here after experiments run.
+Leaderboard will appear here after running research.
 <!-- LEADERBOARD_END -->
-
-Metrics reported include:
-
-• Annual Return  
-• Sharpe Ratio  
-• Sortino Ratio  
-• Maximum Drawdown  
-• Out-of-Sample Sharpe  
 
 ---
 
-## 📈 Example Equity Curve  
-*(Generated automatically after running backtests — dashed line marks start of out-of-sample period in 2020)*
+### Example Strategy Performance
+
+*(Charts generated automatically from research results)*
+
+### Equity Curve
 
 ![Equity Curve](reports/figures/equity_curve.png)
+
+### Rolling Sharpe Ratio
+
+![Rolling Sharpe](reports/figures/rolling_sharpe.png)
+
+### Rolling Drawdown
+
+![Rolling Drawdown](reports/figures/rolling_drawdown.png)
+
+---
+
+## Research Results
+
+### Top Strategies
+
+![Top Strategies](reports/figures/top_strategies.png)
+
+### Return vs Drawdown
+
+![Return vs Drawdown](reports/figures/return_vs_drawdown.png)
 
 ---
 

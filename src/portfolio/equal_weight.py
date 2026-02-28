@@ -1,9 +1,11 @@
 class EqualWeightPortfolio:
 
-    def allocate(self, signal):
+    def construct(self, prices, signals):
 
-        weights = signal.copy()
+        n_assets = signals.shape[1]
 
-        weights = weights.div(weights.abs().sum(axis=1), axis=0)
+        weights = signals.copy()
+
+        weights[:] = 1 / n_assets
 
         return weights

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.env/
+.envrc/
+
+# PyCharm
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Data (do not upload large datasets)
+data/raw/
+data/processed/*.csv
+
+# Temporary research outputs
+reports/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log

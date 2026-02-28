@@ -1,12 +1,18 @@
-class RegimeFilter:
+import pandas as pd
+
+
+class RegimeDetector:
 
     def __init__(self, lookback=200):
+
         self.lookback = lookback
 
-    def apply(self, prices, weights):
+    def detect(self, prices):
 
         ma = prices.rolling(self.lookback).mean()
 
         regime = prices > ma
 
-        return weights * regime
+        regime = regime.astype(int)
+
+        return regime

@@ -37,9 +37,9 @@ class Performance:
     @staticmethod
     def calmar(returns):
         equity = (1 + returns).cumprod()
-        cagr = Performance.cagr(returns)
+        annual_return = Performance.annual_return(returns)
         mdd = abs(Performance.max_drawdown(equity))
-        return cagr / mdd if mdd != 0 else np.nan
+        return annual_return / mdd if mdd != 0 else np.nan
 
     @staticmethod
     def win_rate(returns):
@@ -53,3 +53,13 @@ class Performance:
     def rolling_drawdown(equity):
         running_max = equity.cummax()
         return equity / running_max - 1
+
+    @staticmethod
+    def turnover(weights):
+        return weights.diff().abs().sum(axis=1).mean()
+
+    @staticmethod
+    def profit_factor(returns):
+        wins = returns[returns > 0].sum()
+        losses = abs(returns[returns < 0].sum())
+        return wins / losses
